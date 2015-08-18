@@ -111,6 +111,8 @@ on post-fs-data
     # Sensors
     write /sys/class/input/input4/distortion "400 50 15"
     write /sys/class/input/input5/distortion "400 50 15"
+    write /sys/class/input/input6/distortion "400 50 15"
+    write /sys/class/input/input7/distortion "400 50 15"
 
     # Sensor - soft iron
     write /sys/class/input/input4/static_matrix "9665 -302 -5 -268 10196 146 83 645 10159"
@@ -165,6 +167,17 @@ on post-fs-data
     chown system input /sys/class/input/input5/distortion
     chown system input /sys/class/input/input5/shape
     chown system input /sys/class/input/input5/self_test
+    chown compass input /sys/class/input/input6/offsets
+    chown compass input /sys/class/input/input6/dynamic_matrix
+    chown system input /sys/class/input/input6/threshold
+    chown system input /sys/class/input/input6/distortion
+    chown system input /sys/class/input/input6/shape
+    chown compass input /sys/class/input/input7/offsets
+    chown compass input /sys/class/input/input7/dynamic_matrix
+    chown system input /sys/class/input/input7/threshold
+    chown system input /sys/class/input/input7/distortion
+    chown system input /sys/class/input/input7/shape
+
 
     # proximity_sensor
     chown system input /sys/class/input/input5/enable
