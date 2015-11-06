@@ -44,7 +44,9 @@ BOARD_NFC_CHIPSET := pn547
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/expressltexx/rootdir/fstab.qcom
-COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
+
+# Reduce space taken by the journal
+BOARD_SYSTEMIMAGE_JOURNAL_SIZE := 0
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 10485760
