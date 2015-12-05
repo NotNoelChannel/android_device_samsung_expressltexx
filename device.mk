@@ -97,17 +97,15 @@ PRODUCT_COPY_FILES += \
 # GPS HAL
 PRODUCT_PACKAGES += \
     gps.msm8960
-
-# FM radio
-#PRODUCT_PACKAGES += \
-    qcom.fmradio \
-    libqcomfm_jni \
-    FM2 \
-    FMRecord
     
 # Libgenlock
 PRODUCT_PACKAGES += \
 	libgenlock
+
+# FM radio
+PRODUCT_PACKAGES += \
+    FMRadio \
+    libfmjni
 
 # Lights
 PRODUCT_PACKAGES += \
