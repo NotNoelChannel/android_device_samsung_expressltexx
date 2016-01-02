@@ -125,6 +125,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libril_shim
 
+# Doze
+PRODUCT_PACKAGES += \
+    SamsungDoze
+
 # call common express system props
 $(call inherit-product, device/samsung/expressltexx/system_prop.mk)
 
