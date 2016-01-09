@@ -129,6 +129,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SamsungDoze
 
+# Camera
+PRODUCT_PACKAGES += \
+    Snap
+
 # call common express system props
 $(call inherit-product, device/samsung/expressltexx/system_prop.mk)
 
