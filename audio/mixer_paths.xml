@@ -259,7 +259,7 @@
 
     <path name="handset-mic">
         <path name="adc1" />
-        <ctl name="ADC1 Volume" value="16" />
+        <ctl name="ADC1 Volume" value="30" />
         <ctl name="DEC1 Volume" value="84" />
         <ctl name="MICBIAS1 CAPLESS Switch" value="1" />
     </path>
@@ -282,7 +282,7 @@
 
     <path name="headset-mic">
         <path name="adc2" />
-        <ctl name="ADC2 Volume" value="13" />
+        <ctl name="ADC2 Volume" value="30" />
         <ctl name="DEC1 Volume" value="80" />
         <ctl name="MICBIAS2 CAPLESS Switch" value="1" />
     </path>
