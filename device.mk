@@ -143,6 +143,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libqcomvoiceprocessing
 
+# Gello
+PRODUCT_PACKAGES += \
+    Gello
+
 # call common express system props
 $(call inherit-product, device/samsung/expressltexx/system_prop.mk)
 
