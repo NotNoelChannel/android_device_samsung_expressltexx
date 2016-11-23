@@ -31,7 +31,6 @@ BOARD_KERNEL_BASE := 0x80200000
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 BOARD_KERNEL_PAGESIZE := 2048
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8930-common
-TARGET_KERNEL_HAVE_EXFAT := true
 TARGET_KERNEL_CONFIG := cyanogenmod_express_defconfig
 TARGET_KERNEL_VARIANT_CONFIG := msm8930_express_eur_lte_defconfig
 
