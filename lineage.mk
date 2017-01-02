@@ -18,10 +18,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from expressltexx device
 $(call inherit-product, device/samsung/expressltexx/device.mk)
 
-# Inherit some common CM stuff.
+# Inherit some common Lineage stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_NAME := cm_expressltexx
+PRODUCT_NAME := lineage_expressltexx
 PRODUCT_DEVICE := expressltexx
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
