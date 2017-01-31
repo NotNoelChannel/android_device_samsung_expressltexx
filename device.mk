@@ -136,6 +136,15 @@ PRODUCT_PACKAGES += \
 # Voice processing
 PRODUCT_PACKAGES += \
     libqcomvoiceprocessing
+    
+ifeq ($(WITH_TWRP),true)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
+
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.secure=0 \
+    ro.adb.secure=0
+endif
 
 # call common express system props
 $(call inherit-product, device/samsung/expressltexx/system_prop.mk)

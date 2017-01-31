@@ -96,3 +96,7 @@ BOARD_USES_QC_TIME_SERVICES := true
 
 # CMHW
 BOARD_HARDWARE_CLASS += device/samsung/expressltexx/cmhw
+
+ifeq ($(WITH_TWRP),true)
+-include device/samsung/expressltexx/twrp.mk
+endif
