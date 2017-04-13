@@ -536,11 +536,6 @@ service mpdecision /system/bin/mpdecision --avg_comp
     group root system readproc
     disabled
 
-service qseecomd /system/bin/qseecomd
-    class core
-    user system
-    group system
-
 service charger /sbin/healthd -c
     class charger
     critical
@@ -561,14 +556,3 @@ service wcnss-service /system/bin/wcnss_service
     user system
     group system wifi radio
     oneshot
-
-# insthk
-service insthk /system/bin/insthk
-    class main
-    user root
-    disabled
-    oneshot
-    seclabel u:r:insthk:s0
-
-on property:sys.qseecomd.enable=true
-    start insthk
