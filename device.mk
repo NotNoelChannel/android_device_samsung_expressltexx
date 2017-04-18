@@ -128,6 +128,7 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
+    libshim_c \
     libshim_ril
 
 # Doze
