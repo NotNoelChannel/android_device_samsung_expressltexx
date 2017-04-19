@@ -44,6 +44,9 @@ TARGET_OTA_ASSERT_DEVICE := expressltexx,expresslte,GT-I8730,GT-I8730T
 LZMA_RAMDISK_TARGETS := recovery
 TARGET_RECOVERY_FSTAB := device/samsung/expressltexx/rootdir/fstab.qcom
 
+# Lights		
+TARGET_PROVIDES_LIBLIGHT := true
+
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
