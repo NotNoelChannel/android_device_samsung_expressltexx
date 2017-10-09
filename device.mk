@@ -140,13 +140,10 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     Snap
-	
-# Voice processing
-PRODUCT_PACKAGES += \
-    libqcomvoiceprocessing
 
 # call common express system props
 $(call inherit-product, device/samsung/expressltexx/system_prop.mk)
+
 
 # call common msm8930
 $(call inherit-product, device/samsung/msm8930-common/msm8930.mk)
