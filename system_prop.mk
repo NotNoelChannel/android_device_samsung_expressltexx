@@ -60,19 +60,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.am.reschedule_service=true \
     dalvik.vm.dex2oat-Xms=64m \
     dalvik.vm.dex2oat-Xmx=384m
-
-# Our low-ram optimizations below
-
-# Art
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat-flags=--no-watch-dog \
-
-# Low-RAM optimizations
-ADDITIONAL_BUILD_PROPERTIES += \
-	config.disable_atlas=true \
-
-# Intel's VM tunable recommendations
-ADDITIONAL_BUILD_PROPERTIES += \
-	dalvik.vm.heapgrowthlimit=64m \
-	dalvik.vm.heapsize=174m \
-	dalvik.vm.heapmaxfree=2m
