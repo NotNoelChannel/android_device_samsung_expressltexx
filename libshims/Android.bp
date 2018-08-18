@@ -1,5 +1,5 @@
 cc_library_shared {
-    name: "libshim_camera_loganre",
+    name: "libshim_camera_express",
     srcs: [
         "bionic/bionic_time_conversions.cpp",
         "bionic/pthread_cond.cpp",

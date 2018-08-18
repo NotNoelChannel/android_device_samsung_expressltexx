@@ -119,19 +119,19 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.loganre
+    android.hardware.light@2.0-service.express
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-service.loganre
+    android.hardware.vibrator@1.0-service.express
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.loganre
+    android.hardware.usb@1.0-service.express
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-service.loganre
+    android.hardware.power@1.0-service.express
 
 # IPv6 tethering
 PRODUCT_PACKAGES += \
@@ -144,7 +144,7 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libshim_camera_loganre
+    libshim_camera_express
 
 # Doze
 PRODUCT_PACKAGES += \
@@ -158,8 +158,8 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, device/samsung/expressltexx/system_prop.mk)
 
 
-# call common loganre system debug props
-$(call inherit-product, device/samsung/loganreltexx/system_prop_debug.mk)
+# call common express system debug props
+$(call inherit-product, device/samsung/expressltexx/system_prop_debug.mk)
 
 # call common msm8930
 $(call inherit-product, device/samsung/msm8930-common/msm8930.mk)

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.power@1.0-service.loganre"
+#define LOG_TAG "android.hardware.power@1.0-service.express"
 
 #include <android/log.h>
 #include <hidl/HidlTransportSupport.h>

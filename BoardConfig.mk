@@ -91,7 +91,7 @@ BOARD_CHARGER_SHOW_PERCENTAGE := true
 
 # Camera
 TARGET_LD_SHIM_LIBS := \
-    /system/vendor/bin/mm-qcamera-daemon|libshim_camera_loganre.so
+    /system/vendor/bin/mm-qcamera-daemon|libshim_camera_express.so
 TARGET_NEED_DISABLE_AUTOFOCUS := true
 TARGET_NEED_DISABLE_FACE_DETECTION := true
 TARGET_NEED_DISABLE_FACE_DETECTION_BOTH_CAMERAS := true
