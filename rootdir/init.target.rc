@@ -379,15 +379,6 @@ on post-fs-data
     chown system system /dev/i2c-24
     chmod 660 /dev/i2c-24
 
-    # NFC
-    setprop ro.nfc.port "I2C"
-    chmod 0660 /dev/pn547
-    chown nfc nfc /dev/pn547
-    symlink /dev/pn547 /dev/pn544
-
-    chmod 0660 /dev/pn544
-    chown nfc nfc /dev/pn544
-
     # MDNIE
     chown system system  /sys/class/mdnie/mdnie/lcdtype
     chown system system  /sys/class/mdnie/mdnie/lcd_power

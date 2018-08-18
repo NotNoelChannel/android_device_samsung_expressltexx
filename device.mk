@@ -23,9 +23,6 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
 
-# Inherit from expressltexx
-#$(call inherit-product, device/samsung/expressltexx/nfc.mk)
-
 # Device overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/expressltexx/overlay
 
