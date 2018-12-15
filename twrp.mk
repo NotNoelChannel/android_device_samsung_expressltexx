@@ -24,3 +24,7 @@ TW_NO_REBOOT_BOOTLOADER := true
 TW_NO_USB_STORAGE := false
 TW_TARGET_USES_QCOM_BSP := true
 TW_USE_TOOLBOX := true
+
+# Time zone data for recovery
+PRODUCT_COPY_FILES += \
+    system/timezone/output_data/iana/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
