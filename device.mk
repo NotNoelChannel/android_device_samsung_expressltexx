@@ -149,11 +149,14 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     Snap
+	
+# Telephony
+PRODUCT_PACKAGES += \
+    libsecnativefeature
 
 # call common express system props
 $(call inherit-product, device/samsung/expressltexx/system_prop.mk)
-
-
+	
 # call common express system debug props
 $(call inherit-product, device/samsung/expressltexx/system_prop_debug.mk)
 

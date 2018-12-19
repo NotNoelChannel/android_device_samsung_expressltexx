@@ -37,19 +37,19 @@ vendor/lib/libmm-color-convertor.so
 
 # Radio
 vendor/bin/ds_fmc_appd
-vendor/bin/netmgrd
-vendor/bin/qmuxd
+etc/plmn_se13.binvendor/bin/qmuxd
 vendor/bin/rild
 vendor/bin/rmt_storage
+vendor/lib/libconfigdb.so
 vendor/bin/sec-ril
 vendor/lib/libcordon.so
+vendor/lib/libconfigdb.so
 vendor/lib/libdiag.so
 vendor/lib/libdsutils.so
 vendor/lib/libfactoryutil.so
 vendor/lib/libnetmgr.so
 vendor/lib/libomission_avoidance.so
 vendor/lib/libqdi.so
-vendor/lib/libqdp.so
 vendor/lib/libreference-ril.so
 vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/libril-qc-qmi-1.so
@@ -57,7 +57,6 @@ vendor/lib/libril.so
 vendor/lib/libsecril-client.so
 vendor/lib/libtime_genoff.so
 vendor/lib/libidl.so
-vendor/lib/libqcci_legacy.so
 vendor/lib/libqmi.so
 vendor/lib/libqmi_cci.so
 vendor/lib/libqmi_client_qmux.so
@@ -65,6 +64,13 @@ vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
+vendor/lib/libril-qcril-hook-oem.so
+vendor/lib/libstlport.so
+vendor/lib/libtime_genoff.so
+vendor/lib/libxml.so
+
+# Network
+vendor/bin/radish
 
 # GPS
 vendor/lib/libloc_api_v02.so
