@@ -109,13 +109,10 @@ PRODUCT_PACKAGES += \
     FM2 \
     qcom.fmradio
 
-# GPS config
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/gps.conf:system/etc/gps.conf
-
 # GPS HAL
 PRODUCT_PACKAGES += \
-    gps.msm8960
+    gps.msm8960 \
+    gps.conf
 
 # Lights
 PRODUCT_PACKAGES += \
