@@ -257,8 +257,3 @@ on property:sys.boot_completed=1
     symlink /data/user_de/0/com.android.providers.telephony/shared_prefs/preferred-apn.xml /data/data/com.android.providers.telephony/shared_prefs/preferred-apn.xml
     restorecon /data/data/com.android.providers.telephony/databases
     restorecon /data/data/com.android.providers.telephony/shared_prefs
-
-    # Adaptive LMK
-    write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 0
-    write /sys/module/lowmemorykiller/parameters/minfree "8192,10240,12288,14336,16384,20480"
-    write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 53059
