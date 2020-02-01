@@ -121,6 +121,10 @@ PRODUCT_PACKAGES += \
     gps.msm8960 \
     gps.conf
 
+# IR package
+PRODUCT_PACKAGES += \
+    android.hardware.ir@1.0-service.samsung
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.express
