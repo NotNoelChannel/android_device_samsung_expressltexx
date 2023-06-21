@@ -8,7 +8,7 @@ bin/mpdecision
 bin/thermald
 
 # Audio
-lib/libacdbloader.so
+vendor/lib/libacdbloader.so
 lib/libaudcal.so
 
 # Adreno GPU
