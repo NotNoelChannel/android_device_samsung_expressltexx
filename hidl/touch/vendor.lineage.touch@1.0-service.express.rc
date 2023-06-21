@@ -1,4 +1,4 @@
-service vendor.touch-hal-1-0-serrano /vendor/bin/hw/vendor.lineage.touch@1.0-service.serrano
+service vendor.touch-hal-1-0-serrano /vendor/bin/hw/vendor.lineage.touch@1.0-service.express
     class hal
     user system
     group system
