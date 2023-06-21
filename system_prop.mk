@@ -47,6 +47,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Misc
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.chipname=MSM8930 \
+	wifi.direct.interface=p2p0 \
     wifi.interface=wlan0
 
     
