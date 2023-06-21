@@ -53,8 +53,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat-swap=true \
-    ro.vendor.qti.am.reschedule_service=true
+    dalvik.vm.dex2oat-swap=false
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
