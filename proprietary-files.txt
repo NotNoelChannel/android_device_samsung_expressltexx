@@ -37,9 +37,10 @@ vendor/lib/libmm-color-convertor.so
 
 # Radio
 vendor/bin/ds_fmc_appd
-etc/plmn_se13.binvendor/bin/qmuxd
+vendor/bin/qmuxd
 vendor/bin/rild
 vendor/bin/rmt_storage
+vendor/etc/plmn_se13.bin
 vendor/lib/libconfigdb.so
 vendor/bin/sec-ril
 vendor/lib/libcordon.so
