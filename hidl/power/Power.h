@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The LineageOS Project
+ * Copyright (C) 2015 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,54 +14,118 @@
  * limitations under the License.
  */
 
-#ifndef ANDROID_HARDWARE_POWER_V1_0_POWER_H
-#define ANDROID_HARDWARE_POWER_V1_0_POWER_H
-
-#include <android/hardware/power/1.0/IPower.h>
-#include <vendor/lineage/power/1.0/ILineagePower.h>
-#include <hidl/MQDescriptor.h>
-#include <hidl/Status.h>
 #include <hardware/power.h>
 
-extern "C" {
-void power_init(void);
-void power_hint(power_hint_t hint, void *data);
-void power_set_interactive(int on);
-int __attribute__ ((weak)) get_number_of_profiles();
-}
+/* Video encode hint optimisations */
+#define VID_ENC_TIMER_RATE 30000
+#define VID_ENC_IO_IS_BUSY 0
 
-namespace android {
-namespace hardware {
-namespace power {
-namespace V1_0 {
-namespace implementation {
-
-using ::android::hardware::power::V1_0::Feature;
-using ::android::hardware::power::V1_0::PowerHint;
-using ::android::hardware::power::V1_0::IPower;
-using ::vendor::lineage::power::V1_0::ILineagePower;
-using ::vendor::lineage::power::V1_0::LineageFeature;
-using ::android::hardware::Return;
-using ::android::hardware::Void;
-
-struct Power : public IPower, public ILineagePower {
-    // Methods from ::android::hardware::power::V1_0::IPower follow.
-    Power();
-    status_t registerAsSystemService();
-
-    Return<void> setInteractive(bool interactive) override;
-    Return<void> powerHint(PowerHint hint, int32_t data) override;
-    Return<void> setFeature(Feature feature, bool activate) override;
-    Return<void> getPlatformLowPowerStats(getPlatformLowPowerStats_cb _hidl_cb) override;
-
-    // Methods from ::vendor::lineage::power::V1_0::ILineagePower follow.
-    Return<int32_t> getFeature(LineageFeature feature) override;
+enum {
+    PROFILE_POWER_SAVE = 0,
+    PROFILE_BALANCED,
+    PROFILE_HIGH_PERFORMANCE,
+    PROFILE_BIAS_POWER,
+    PROFILE_MAX
 };
 
-}  // namespace implementation
-}  // namespace V1_0
-}  // namespace power
-}  // namespace hardware
-}  // namespace android
+typedef struct governor_settings {
+    int is_interactive;
+    int boost;
+    int boostpulse_duration;
+    int go_hispeed_load;
+    int go_hispeed_load_off;
+    int hispeed_freq;
+    int hispeed_freq_off;
+    int timer_rate;
+    int timer_rate_off;
+    char* above_hispeed_delay;
+    int io_is_busy;
+    int min_sample_time;
+    int max_freq_hysteresis;
+    char* target_loads;
+    char* target_loads_off;
+    int limited_min_freq;
+    int limited_max_freq;
+} power_profile;
 
-#endif  // ANDROID_HARDWARE_POWER_V1_0_POWER_H
+static power_profile profiles[PROFILE_MAX] = {
+        [PROFILE_POWER_SAVE] =
+            {
+                .boost = 0,
+                .boostpulse_duration = 40000,
+                .go_hispeed_load = 90,
+                .go_hispeed_load_off = 110,
+                .hispeed_freq = 702000,
+                .hispeed_freq_off = 702000,
+                .timer_rate = 20000,
+                .timer_rate_off = 50000,
+                .above_hispeed_delay = "19000 1400000:39000",
+                .io_is_busy = 1,
+                .min_sample_time = 39000,
+                .max_freq_hysteresis = 99000,
+                .target_loads = "85 1700000:90",
+                .target_loads_off = "95 1728000:99",
+                .limited_min_freq = 384000,
+                .limited_max_freq = 1026000,
+            },
+        [PROFILE_BALANCED] =
+            {
+                .boost = 0,
+                .boostpulse_duration = 40000,
+                .go_hispeed_load = 90,
+                .go_hispeed_load_off = 110,
+                .hispeed_freq = 918000,
+                .hispeed_freq_off = 918000,
+                .timer_rate = 20000,
+                .timer_rate_off = 50000,
+                .above_hispeed_delay = "19000 1400000:39000",
+                .io_is_busy = 1,
+                .min_sample_time = 39000,
+                .max_freq_hysteresis = 99000,
+                .target_loads = "85 1700000:90",
+                .target_loads_off = "95 1728000:99",
+                .limited_min_freq = 384000,
+                .limited_max_freq = 1728000,
+            },
+        [PROFILE_HIGH_PERFORMANCE] =
+            {
+                .boost = 1,
+                .boostpulse_duration = 40000,
+                .go_hispeed_load = 50,
+                .go_hispeed_load_off = 110,
+                .hispeed_freq = 1134000,
+                .hispeed_freq_off = 1134000,
+                .timer_rate = 20000,
+                .timer_rate_off = 50000,
+                .above_hispeed_delay = "19000 1400000:39000",
+                .io_is_busy = 1,
+                .min_sample_time = 39000,
+                .max_freq_hysteresis = 99000,
+                .target_loads = "80 1700000:90",
+                .target_loads_off = "90 1728000:99",
+                .limited_min_freq = 384000,
+                .limited_max_freq = 1728000,
+            },
+        [PROFILE_BIAS_POWER] =
+            {
+                .boost = 0,
+                .boostpulse_duration = 40000,
+                .go_hispeed_load = 90,
+                .go_hispeed_load_off = 110,
+                .hispeed_freq = 702000,
+                .hispeed_freq_off = 702000,
+                .timer_rate = 20000,
+                .timer_rate_off = 50000,
+                .above_hispeed_delay = "19000 1400000:39000",
+                .io_is_busy = 1,
+                .min_sample_time = 39000,
+                .max_freq_hysteresis = 99000,
+                .target_loads = "85 1700000:90",
+                .target_loads_off = "95 1728000:99",
+                .limited_min_freq = 384000,
+                .limited_max_freq = 1242000,
+            },
+};
+
+// Custom Lineage hints
+const static power_hint_t POWER_HINT_SET_PROFILE = (power_hint_t)0x00000111;
