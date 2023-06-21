@@ -53,7 +53,6 @@ done
 
 # Pick up overlay for features that depend on non-open-source files
 PRODUCT_PACKAGES += \\
-    libtime_genoff \\
     libTimeService \\
     TimeService
 
@@ -100,16 +99,6 @@ EOF
 LOCAL_PATH := \$(call my-dir)
 
 ifneq (\$(filter expressltexx,\$(TARGET_DEVICE)),)
-
-include \$(CLEAR_VARS)
-LOCAL_MODULE := libtime_genoff
-LOCAL_MODULE_OWNER := samsung
-LOCAL_SRC_FILES := proprietary/lib/libtime_genoff.so
-LOCAL_MODULE_PATH := \$(TARGET_OUT_SHARED_LIBRARIES)
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := TimeService
