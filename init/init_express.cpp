@@ -56,9 +56,10 @@ void vendor_load_properties()
         property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/expressltexx/expresslte:4.4.2/KOT49H/I8730XXUCNE6:user/release-keys");
         property_override("ro.build.description", "expressltexx-user 4.4.2 KOT49H I8730XXUCNE6 release-keys");
         property_override_dual("ro.product.model", "ro.product.vendor.model", "GT-I8730");
-        property_override_dual("ro.product.device", "ro.product.vendor.device", "expressltexx");
+        property_override_dual("ro.product.device", "ro.product.vendor.device", "expresslte");
+		property_override_dual("ro.product.device", "ro.lineage.device", "expresslte");
     }
 
-    const std::string device = android::base::GetProperty("ro.product.device", "");
-    LOG(INFO) << "Found bootloader " << bootloader.c_str() << ". " << "Setting build properties for " << device.c_str() << ".\n";
+    const std::string device = GetProperty("ro.product.device", "");
+    LOG(INFO) << "Found bootloader " << bootloader << ". " << "Setting build properties for " << device << ".\n";
 }
