@@ -69,8 +69,8 @@ lib/libqmiservices.so
 lib/libloc_api_v02.so
 
 # Sensors
-bin/geomagneticd
-lib/hw/sensors.msm8960.so
+vendor/bin/geomagneticd
+vendor/lib/libsensors.so
 
 # Camera
 bin/mm-qcamera-daemon
