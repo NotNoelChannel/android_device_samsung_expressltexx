@@ -51,24 +51,12 @@ void vendor_load_properties()
         property_override("ro.serialno", serial_number.c_str());
     }
 
-    if (model == "I257M") {
-        /* serranoltebmc */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/serranoltebmc/serranoltebmc:4.4.2/KOT49H/I257MVLUBNE6:user/release-keys");
-        property_override("ro.build.description", "serranoltebmc-user 4.4.2 KOT49H I257MVLUBNE6 release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "SGH-I257M");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "serranoltebmc");
-    } else if (model == "I9195") {
+    if (model == "I8730") {
         /* serranoltexx */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/serranoltexx/serranolte:4.4.2/KOT49H/I9195XXUCNE6:user/release-keys");
-        property_override("ro.build.description", "serranoltexx-user 4.4.2 KOT49H I9195XXUCNE6 release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "GT-I9195");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "serranoltexx");
-    } else if (model == "E370K") {
-        /* serranoltektt */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint",  "samsung/serranoltektt/serranoltektt:4.4.4/KTU84P/E370KKTU2BNK5:user/release-keys");
-        property_override("ro.build.description", "serranoltektt-user 4.4.4 KTU84P E370KKTU2BNK5 release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "SHV-E370K");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "serranoltektt");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/expressltexx/expresslte:4.4.2/KOT49H/I8730XXUCNE6:user/release-keys");
+        property_override("ro.build.description", "expressltexx-user 4.4.2 KOT49H I8730XXUCNE6 release-keys");
+        property_override_dual("ro.product.model", "ro.vendor.product.model", "GT-I8730");
+        property_override_dual("ro.product.device", "ro.vendor.product.device", "expressltexx");
     }
 
     const std::string device = android::base::GetProperty("ro.product.device", "");
