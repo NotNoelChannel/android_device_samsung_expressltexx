@@ -1,8 +1,8 @@
 cc_binary {
-    name: "vendor.lineage.touch@1.0-service.serrano",
+    name: "vendor.lineage.touch@1.0-service.express",
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
-    init_rc: ["vendor.lineage.touch@1.0-service.serrano.rc"],
+    init_rc: ["vendor.lineage.touch@1.0-service.express.rc"],
     srcs: ["service.cpp", "KeyDisabler.cpp"],
     shared_libs: [
         "libbase",
