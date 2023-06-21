@@ -4,7 +4,6 @@
     <bool name="def_bluetooth_on">false</bool>
     <bool name="def_screen_brightness_automatic_mode">true</bool>
 	<bool name="def_vibrate_when_ringing">true</bool>
-	<string name="def_location_providers_allowed" translatable="false">gps,network</string>
 	
     <!-- Time format,default vlaue is 24 : 24 format,other value is 12 format -->
     <string name="def_time_format" translatable="false">24</string>
