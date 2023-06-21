@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "vendor.lineage.livedisplay@2.0-service.serrano"
+#define LOG_TAG "vendor.lineage.livedisplay@2.0-service.express"
 
 #include <android-base/logging.h>
 #include <binder/ProcessState.h>
