@@ -16,6 +16,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mm.enable.smoothstreaming=true \
     vendor.dedicated.device.for.voip=true \
     vendor.voice.path.for.pcm.voip=true \
+	ro.vendor.fm.use_audio_session=true \
     media.aac_51_output_enabled=true
 
 # Graphics
