@@ -13,7 +13,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.disable=1 \
-    mm.enable.smoothstreaming=true \
     vendor.dedicated.device.for.voip=true \
     vendor.voice.path.for.pcm.voip=true \
 	ro.vendor.fm.use_audio_session=true \
