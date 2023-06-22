@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+#include "SunlightEnhancement.h"
+
 #include <android-base/file.h>
 #include <android-base/strings.h>
 

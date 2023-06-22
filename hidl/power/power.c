@@ -15,7 +15,6 @@
  */
 #define LOG_TAG "PowerHAL"
 
-#include <hardware/hardware.h>
 #include <hardware/power.h>
 
 #include <errno.h>

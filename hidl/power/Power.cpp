@@ -16,8 +16,7 @@
 
 #define LOG_TAG "android.hardware.power@1.1-service.express"
 
-#include <android/log.h>
-#include <utils/Log.h>
+#include <log/log.h>
 #include "Power.h"
 
 namespace android {
