@@ -370,8 +370,8 @@
         <ctl name="DAC4 MUX" value="ON" />
         <ctl name="HPHL Volume" value="10" />
         <ctl name="HPHR Volume" value="10" />
-        <ctl name="RX2 Digital Volume" value="88" />
-        <ctl name="RX3 Digital Volume" value="88" />
+        <ctl name="RX2 Digital Volume" value="78" />
+        <ctl name="RX3 Digital Volume" value="78" />
     </path>
 
     <path name="voice-headset-mic">
